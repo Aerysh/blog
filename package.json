@@ -7,13 +7,21 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write . --cache",
+    "lint": "eslint ."
   },
   "dependencies": {
     "astro": "^4.14.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.8.3",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.5.4"
   }
 }
