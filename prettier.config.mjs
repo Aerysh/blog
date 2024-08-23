@@ -5,7 +5,7 @@ const config = {
 	tabWidth: 2,
 	trailingComma: 'es5',
 	useTabs: true,
-	plugins: ['prettier-plugin-astro'],
+	plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
 	overrides: [
 		{
 			files: ['.*', '*.json', '*.md', '*.mdx', '*.toml', '*.yml'],

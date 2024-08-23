@@ -1,16 +1,14 @@
 ---
-
+import BaseLayout from '../layouts/base-layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home">
+	<section class="my-4 space-y-4">
+		<h1 class="text-3xl font-bold">Welcome</h1>
+		<p class="text-slate-500 dark:text-slate-400">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita reprehenderit recusandae
+			dolor laboriosam hic harum. Eligendi commodi dolorem corrupti sit cum suscipit doloribus eius
+			pariatur omnis! Commodi voluptatum harum aut.
+		</p>
+	</section>
+</BaseLayout>

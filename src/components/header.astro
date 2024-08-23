@@ -1,0 +1,28 @@
+---
+const menuItems = [
+	{ name: 'works', target: '/works' },
+	{ name: 'posts', target: '/posts' },
+	{ name: 'contacts', target: '/contacts' },
+];
+---
+
+<header class="-m-4 my-0 flex flex-wrap items-center px-4 py-2">
+	<div class="m-0 flex-1">
+		<a href="/" class="whitespace-pre break-keep text-2xl font-bold hover:underline focus:underline"
+			>aerysh
+		</a>
+	</div>
+	<nav>
+		<ul class="mx-auto my-0 flex list-none gap-4 p-0">
+			{
+				menuItems.map((menu) => (
+					<li>
+						<a href={menu.target} class="hover:underline focus:underline">
+							{menu.name}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+</header>
