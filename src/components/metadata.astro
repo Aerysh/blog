@@ -1,0 +1,34 @@
+---
+import { SEO } from 'astro-seo';
+import SiteMeta from '../types/SiteMeta';
+
+type Props = SiteMeta;
+
+const {
+	title,
+	description,
+	ogImage,
+	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+} = Astro.props;
+
+const socialImageURL = new URL(ogImage ? ogImage : '/og-image.png', Astro.url)
+	.href;
+
+const buildTitle = `${title} | aerysh`
+---
+
+<SEO
+	title={buildTitle}
+	description={description}
+	canonical={canonicalURL}
+	openGraph={{
+		basic: { title: buildTitle, type: 'website', image: socialImageURL, url: canonicalURL },
+		optional: { description },
+	}}
+	twitter={{
+		card: 'summary_large_image',
+		title: buildTitle,
+		image: socialImageURL,
+		description,
+	}}
+/>
