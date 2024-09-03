@@ -12,13 +12,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "astro": "^4.14.4"
+    "astro": "^4.15.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.8.3",
+    "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.0",
-    "@typescript-eslint/parser": "^8.2.0",
-    "eslint": "^9.9.0",
+    "@typescript-eslint/parser": "^8.4.0",
+    "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
     "prettier": "^3.3.3",
