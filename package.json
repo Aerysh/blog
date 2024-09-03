@@ -12,7 +12,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "astro": "^4.15.2"
+    "astro": "^4.15.2",
+    "astro-seo": "^0.8.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.3",
