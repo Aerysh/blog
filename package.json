@@ -13,11 +13,13 @@
   },
   "dependencies": {
     "astro": "^4.15.9",
+    "astro-icon": "^1.1.1",
     "astro-seo": "^0.8.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.1",
+    "@iconify-json/mdi": "^1.2.0",
     "@typescript-eslint/parser": "^8.7.0",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",

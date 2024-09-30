@@ -1,7 +1,9 @@
 ---
 import '../styles/base.css';
 import Metadata from '../components/metadata.astro';
+import Sidebar from '../components/sidebar.astro';
 import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 export type Props = {
@@ -23,8 +25,14 @@ const { title, description, ogImage } = Astro.props;
 
 		<ViewTransitions />
 	</head>
-	<body>
-		<Header />
-		<main><slot /></main>
+	<body class="mx-auto flex h-svh max-h-svh w-full max-w-screen-lg">
+		<Sidebar />
+		<div class="flex h-full flex-1 flex-col gap-4 p-4">
+			<Header />
+			<main class="h-full">
+				<slot />
+			</main>
+			<Footer />
+		</div>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 ---
 import { SEO } from 'astro-seo';
-import SiteMeta from '../types/SiteMeta';
+import type { SiteMeta } from '../types';
 
 type Props = SiteMeta;
 
@@ -14,7 +14,7 @@ const {
 const socialImageURL = new URL(ogImage ? ogImage : '/og-image.png', Astro.url)
 	.href;
 
-const buildTitle = `${title} | aerysh`
+const buildTitle = `${title} | aerysh`;
 ---
 
 <SEO
@@ -22,7 +22,12 @@ const buildTitle = `${title} | aerysh`
 	description={description}
 	canonical={canonicalURL}
 	openGraph={{
-		basic: { title: buildTitle, type: 'website', image: socialImageURL, url: canonicalURL },
+		basic: {
+			title: buildTitle,
+			type: 'website',
+			image: socialImageURL,
+			url: canonicalURL,
+		},
 		optional: { description },
 	}}
 	twitter={{

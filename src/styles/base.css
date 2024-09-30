@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	@apply bg-white text-slate-900 dark:bg-slate-900 dark:text-white;
-}
+/* html { */ /* 	@apply bg-white text-slate-900 dark:bg-slate-900 dark:text-white; */
+/* } */
 
-body {
-	@apply mx-auto h-full min-h-full max-w-screen-md p-4;
-}
+/* body { */
+/* 	@apply mx-auto h-full min-h-full max-w-screen-md p-4; */
+/* } */
