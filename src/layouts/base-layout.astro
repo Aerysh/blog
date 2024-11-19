@@ -1,10 +1,8 @@
 ---
 import '../styles/base.css';
-import Metadata from '../components/metadata.astro';
-import Sidebar from '../components/sidebar.astro';
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+import Metadata from '../components/metadata.astro';
 
 export type Props = {
 	title: string;
@@ -22,17 +20,12 @@ const { title, description, ogImage } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 		<Metadata title={title} description={description} ogImage={ogImage} />
-
-		<ViewTransitions />
 	</head>
-	<body class="mx-auto flex h-svh max-h-svh w-full max-w-screen-lg">
-		<Sidebar />
-		<div class="flex h-full flex-1 flex-col gap-4 p-4">
-			<Header />
-			<main class="h-full">
-				<slot />
-			</main>
+	<body>
+		<Header />
+		<main>
+			<slot />
 			<Footer />
-		</div>
+		</main>
 	</body>
 </html>

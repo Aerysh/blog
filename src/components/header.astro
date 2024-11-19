@@ -1,22 +1,26 @@
 ---
-import { menuLinks } from '../site.config.ts';
 
-const pathname = new URL(Astro.request.url).pathname;
 ---
 
-<header class="w-full md:hidden">
-	<ul class="flex list-none flex-row justify-center gap-4">
-		{
-			menuLinks.map((link) => (
-				<li>
-					<a
-						href={link.path}
-						class={pathname === link.path ? 'text-slate-800' : 'text-slate-500'}
-					>
-						{link.title}
-					</a>
-				</li>
-			))
-		}
-	</ul>
+<header>
+	<nav class="mx-auto flex h-16 items-center" transition:persist>
+		<div>
+			<div class="flex items-center">
+				<a
+					href="/"
+					class="whitespace-nowrap text-xl font-semibold dark:text-white"
+					>aerysh</a
+				>
+			</div>
+		</div>
+		<ul class="flex flex-1 items-center justify-end gap-4">
+			<li>
+				<a
+					href="/posts"
+					class="text-slate-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+					>posts</a
+				>
+			</li>
+		</ul>
+	</nav>
 </header>

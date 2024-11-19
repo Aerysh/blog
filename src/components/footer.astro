@@ -1,11 +1,47 @@
 ---
+import { Icon } from 'astro-icon/components';
 
+const year = new Date().getFullYear();
 ---
 
-<div class="w-full">
-	<section>
-		<p class="text-slate-500 dark:text-slate-400">
-			&copy; {new Date().getFullYear()} aerysh
-		</p>
-	</section>
-</div>
+<footer>
+	<div class="mx-auto flex h-16 items-center">
+		<div class="flex items-center">
+			<p>
+				&copy; {year}
+				<a
+					href="https://github.com/Aerysh"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+					>aerysh</a
+				>
+			</p>
+		</div>
+		<ul class="flex flex-1 items-center justify-end gap-4">
+			<li>
+				<a
+					href="https://github.com/Aerysh"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon name="mdi:github" />
+				</a>
+			</li>
+			<li>
+				<a href="mailto:a@a.com" target="_blank" rel="noopener noreferrer">
+					<Icon name="mdi:email" />
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://linkedin.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon name="mdi:linkedin" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</footer>
